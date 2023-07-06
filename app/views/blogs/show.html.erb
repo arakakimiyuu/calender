@@ -1,0 +1,11 @@
+<div class="show">
+ <strong>タイトル</strong>
+  <%= @blog.title %>
+ <strong>内容</strong>
+  <%= @blog.content %>
+ <strong>日時</strong>
+  <%= @blog.start_time.strftime("%m-%d") %>
+ <%= link_to "編集" edit_blog_path %>
+ <%= link_to "削除" blog_path, method: :delete, data:{ confirm: "本当に消していいですか？" } %>
+ <%= link_to "戻る" blogs_path %>
+</div>

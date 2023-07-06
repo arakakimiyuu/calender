@@ -1,7 +1,7 @@
 <div>
   <h1>カレンダー</h1>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="schedule">今後の予定一覧</div>
       <table class="table">
         <thead>
@@ -11,15 +11,15 @@
           </tr>
         </thead>
         <tbody>
-          <% @blog.each do |blog| %>
+          <% @blogs.each do |blog| %>
            <tr>
-             <td><%= link_to blog.title %></td>
+             <td><%= link_to blog.title,blog %></td>
              <td><%= blog.start_time.strftime("%m-%d") %></td>
            </tr>
           <% end %>
         </tbody>
       </table>
-      <%= form_with model: @blog do |f| %>
+      <%= form_with model: @blog, url: blogs_path, method: :post do |f| %>
        <div class="title">
          <div class="form_tag">タイトル</div>
          <%= f.text_field :title %>
@@ -37,6 +37,15 @@
         </div>
       <% end %>
     </div>
-    
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+     <%= month_calendar events: @blogs do |date, blog| %>
+      <%= date.day %>
+      <% @blogs.each do |blog| %>
+       <%= link_to blog.title, blog %>
+      <% end %>
+     <% end %>
+    </div>
   </div>
 </div>
