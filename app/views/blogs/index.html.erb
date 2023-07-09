@@ -14,7 +14,7 @@
           <% @blogs.each do |blog| %>
            <tr>
              <td><%= link_to blog.title,blog %></td>
-             <td><%= blog.start_time.strftime("%m-%d") %></td>
+             <td><%= blog.start_time %></td>
            </tr>
           <% end %>
         </tbody>
@@ -43,7 +43,7 @@
      <%= month_calendar events: @blogs do |date, blog| %>
       <%= date.day %>
       <% @blogs.each do |blog| %>
-       <%= link_to blog.title, blog %>
+       <%= link_to blog.title %>
       <% end %>
      <% end %>
     </div>
