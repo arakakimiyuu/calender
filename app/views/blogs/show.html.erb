@@ -1,3 +1,4 @@
+<p id="notice"><%= notice %></p>
 <div class="row">
  <div class="col-md-6 offset-2">
    <div class="show">
@@ -6,7 +7,7 @@
     <div>内容</div>
      <%= @blog.content %>
     <div>日時</div>
-     <%= @blog.start_time %>
+     <%= @blog.start_time.strftime("%m-%d") %>
     <%= link_to "編集", edit_blog_path(@blog) %>
     <%= link_to "削除" , blog_path(@blog.id), method: :delete, data:{ confirm: "本当に消していいですか？" } %>
     <%= link_to "戻る", blogs_path %>
