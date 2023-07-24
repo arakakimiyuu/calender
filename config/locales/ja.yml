@@ -56,3 +56,9 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
+
+  simple_calendar:
+    previous: "<<"
+    next: ">>"
+    first: '最初'
+    last: '最後'
