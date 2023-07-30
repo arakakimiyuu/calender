@@ -58,7 +58,7 @@ ja:
     pm: 午後
 
   simple_calendar:
-    previous: "<<"
-    next: ">>"
+    previous: "前月"
+    next: "翌月"
     first: '最初'
     last: '最後'
