@@ -53,6 +53,14 @@
     background: #FFFFC0
   }
 
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
   .prev-month {
     background: #DDD;
   }
@@ -65,4 +73,16 @@
   .wday-6 a {
      color: blue;
   }
+
+  .today {}
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {}
+  .next-month { }
+  .current-month {}
+
+  .has-events {}
 }
